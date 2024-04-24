@@ -1,12 +1,14 @@
 import { useState,useEffect } from "react";
 import "../pages/index/App.css";
+import {Tooltip} from 'antd'
+
 
 const BotIcon = () => {
     return <svg
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
-      fill="currentColor"
+      fill='currentColor'
       class="bi bi-robot"
       viewBox="0 0 16 16"
     >
@@ -25,6 +27,8 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
     return (
 
           <div className="flex flex-col justify-center items-center gap-2">
+             <Tooltip placement="right" title={"2 Players"} color='blue' >
+           
             <button
               className={`button ${gameMode === "2P" ? "button-active" : ""}`}
               onClick={() => handleModeChange("2P")}
@@ -41,6 +45,11 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
               </svg>
                
             </button>
+          </Tooltip>
+
+          
+          <Tooltip placement="right" title={"Against BOT"}  color='blue' >
+
             <button
               className={`button ${gameMode === "BOT" ? "button-active" : ""}`}
               onClick={() => handleModeChange("BOT")}
@@ -48,8 +57,8 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
               <BotIcon />
               
             </button>
-            
-          </div>
+            </Tooltip> 
+                  </div>
 
 
     );

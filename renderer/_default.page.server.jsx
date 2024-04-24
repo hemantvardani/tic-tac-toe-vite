@@ -30,6 +30,11 @@ async function render(pageContext) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>
+
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+</style>
+
       </head>
       <body>
         <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>

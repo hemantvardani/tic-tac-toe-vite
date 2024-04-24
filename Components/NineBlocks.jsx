@@ -92,6 +92,10 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
  
   return (
     <>
+    <div style={{marginTop:-10}}>
+
+
+ 
       {board.map((row, rowIndex) =>
         row.map((cell, colIndex) => {
           const key = `${rowIndex}-${colIndex}`;
@@ -116,6 +120,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
           );
         })
       )}
+         </div>
     </>
   );
 }

@@ -54,7 +54,7 @@ function App() {
   return (
    
     <div className="h-screen bg-[#191c21] text-white flex justify-center items-center ">
-      <div className="aspect-square w-full h-full flex flex-col  items-center">
+      <div className="aspect-square w-full h-full flex flex-col justify-end items-center">
       <IndexScreen/>
 
   

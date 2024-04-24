@@ -64,7 +64,7 @@ export function IndexScreen(){
  
  <Grid winner={winner} setWinner={setWinner} setScores={setScores} isX={isX} setIsX={setIsX} gameMode={gameMode} setGameMode={setGameMode} />
 
- <ScoreTable scores={scores} />
+ <ScoreTable scores={scores} isX={isX} gameMode={gameMode}/>
  
  </>);
 

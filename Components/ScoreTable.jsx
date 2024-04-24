@@ -1,86 +1,98 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../pages/index/App.css";
 
-import React from 'react';
-import { Grid, Typography, Card, Avatar } from '@mui/material';
-import { KingOutlined as CrownIcon } from '@mui/icons-material'; // Material UI crown icon
+import React from "react";
 
+import crownImage from "./../renderer/crown3.png";
+import { Tooltip } from "antd";
 
-
-
-// export function ScoreTable({scores}){
-//  const isX=false;
-//     return (
-//         <div className="score flex gap-3 absolute bottom-0">
-//         <div
-//           className={`text-5xl ${isX ? "move-underline" : ""}`}
-//           style={{
-//             color:
-//               scores.player1 !== scores.player2
-//                 ? scores.player1 > scores.player2
-//                   ? "green"
-//                   : "red"
-//                 : "white",
-//           }}
-//         >
-//           X : {scores.player1}
-//         </div>
-//         <div
-//           className={`text-5xl ${!isX ? "move-underline" : ""}`}
-//           style={{
-//             color:
-//               scores.player1 !== scores.player2
-//                 ? scores.player1 < scores.player2
-//                   ? "green"
-//                   : "red"
-//                 : "white",
-//           }}
-//         >
-//           O : {scores.player2}
-//         </div>
-//       </div>
-
-
-
-
-//     );
-
-// }
-
-
-
-
-export const ScoreTable = ({ scores }) => {
-  const xScore= scores.player1;
-  const oScore= scores.player2;
-  const leadingPlayer = xScore > oScore ? 'X' : (xScore < oScore ? 'O' : 'Tie');
+export function ScoreTable({ scores, isX , gameMode}) {
+  const isXLeading = scores.player1 >= scores.player2 && scores.player1 != 0;
+  const isOLeading = scores.player2 >= scores.player1 && scores.player2 != 0;
 
   return (
-    <Card sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem' }}>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          {leadingPlayer === 'X' && (
-            <Avatar sx={{ mr: 1, bgcolor: 'blue' }}>
-              <CrownIcon />
-            </Avatar>
-          )}
-          <Typography variant="h6" component="div" sx={{ color: 'blue' }}>
-            X: {xScore}
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          {leadingPlayer === 'O' && (
-            <Avatar sx={{ mr: 1, bgcolor: 'inherit' }}>
-              <CrownIcon />
-            </Avatar>
-          )}
-          <Typography variant="h6" component="div">
-            O: {oScore}
-          </Typography>
-        </Grid>
-      </Grid>
-    </Card>
-  );
-};
+    <div className="score items-end flex gap-3">
 
- 
+      <div className="flex flex-col  justify-end">
+        <div style={{
+          // background:'blue'
+          }}>
+        {isXLeading && (
+              <img
+                src={crownImage}
+                alt="Crown"
+                style={{
+                   marginBottom:'-5px',
+                  // top: "-0px", // Adjust this to position the crown
+                  // left: "30%", // Adjust this to position the crown
+                  transform: "translateX(-24%)", // Center the crown horizontally
+                  height: "50px", // Adjust the size of the crown
+                }}
+              />
+            )}
+        </div>
+        <Tooltip
+          placement="top"
+          title={`Score of X is ${scores.player1}`}
+          color="blue"
+          
+        >
+          <div
+            className={`text-3xl -m-6`}
+            style={{
+              color: isXLeading ? "green" : "white",
+           
+            }}
+          >
+            X : {scores.player1}
+           
+          </div>
+        </Tooltip>
+        <div className={` ${isX ? "move-underline" : ""}`}/>
+      </div>
+
+
+      <div className="flex flex-col  justify-end">
+        <div style={{
+          // background:'blue'
+          }}>
+        {isOLeading && (
+              <img
+                src={crownImage}
+                alt="Crown"
+                style={{
+                   marginBottom:'-5px',
+                  // top: "-0px", // Adjust this to position the crown
+                  // left: "30%", // Adjust this to position the crown
+                  transform: "translateX(-24%)", // Center the crown horizontally
+                  height: "50px", // Adjust the size of the crown
+                }}
+              />
+            )}
+        </div>
+        <Tooltip
+          placement="top"
+          title={`Score of O is ${scores.player2}`}
+          color="blue"
+          
+        >
+          <div
+            className={`text-3xl -m-6`}
+            style={{
+              color: isOLeading ? "green" : "white",
+           
+            }}
+          >
+            O : {scores.player2}
+           
+          </div>
+        </Tooltip>
+        <div className={` ${!isX &&  gameMode ==='2P' ? "move-underline" : ""}`}/>
+      </div>
+
+
+
+  
+    </div>
+  );
+}

@@ -44,7 +44,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
 
     return (  
       
-      <div className="flex justify-center items-center flex-1 gap-16">
+      <div className="mt-10 flex justify-center items-center flex-1 gap-16">
     <div className="game">
  
       <div className="board relative">
