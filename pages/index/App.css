@@ -1,0 +1,169 @@
+/* Custom styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #191c21;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game {
+  width: 450px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: #191c21;
+  box-shadow: 20 20 20px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.stick-vertical,
+.stick-horizontal {
+  background-color: #99a3ac;
+}
+
+.stick-vertical {
+  width: 6px;
+}
+
+.stick-horizontal {
+  height: 6px;
+}
+
+/* Positioning for sticks */
+.stick-vertical:nth-child(1) {
+  left: calc(33.33% - 3px);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+}
+
+.stick-vertical:nth-child(2) {
+  left: calc(66.66% - 3px);
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+}
+
+.stick-horizontal:nth-child(1) {
+  left: 50%;
+  top: calc(33.33% - 3px);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.stick-horizontal:nth-child(2) {
+  left: 50%;
+  top: calc(66.66% - 3px);
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink-animation {
+  animation: blink 500ms infinite;
+}
+
+.button {
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  border-color: #ff0000;
+  border-width: 2px;
+  cursor: pointer;
+  transition: background-color  0.1s, font-size 0.3s;
+}
+
+.button:hover {
+  background-color: #888888;
+  padding: 10px 20px;
+}
+
+.button-active {
+  background-color: #666666;
+  padding: 9px 16px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.score div {
+  padding: 8px 16px;
+  border-radius: 8px;
+  /* background-color: #4a5568; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+}
+
+
+
+.score div span {
+  font-weight: bold;
+}
+
+.score div svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+
+/* Add this to your App.css or wherever your global styles are */
+/* Add this to your App.css or wherever your global styles are */
+@keyframes moveUnderline {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+  }
+  50% {
+    transform: translateX(-50%) scaleX(1);
+  }
+  100% {
+    transform: translateX(-50%) scaleX(0);
+  }
+}
+
+.move-underline {
+  position: relative;
+}
+
+.move-underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px; /* Adjust the distance from the text */
+  height: 4px;
+  width: 100%;
+  /* background-color: #ffffff;  */
+  transform-origin: bottom left;
+  transform: translateX(-50%) scaleX(0);
+  animation: moveUnderline 2s linear infinite;
+  background-color: white !important; /* Ensure the underline color is white */
+}
