@@ -1,6 +1,5 @@
 import { useState,useEffect } from "react";
-import { Winner } from "../Components/Winner";
-import { Grid } from "../Components/Grid";
+ import { Grid } from "../Components/Grid";
 import { ScoreTable } from "../Components/ScoreTable";
 import "../pages/index/App.css";
 
@@ -11,6 +10,7 @@ export function IndexScreen(){
     const [isX, setIsX] = useState(true);
     const [gameMode, setGameMode] = useState("2P"); // Default: 2 Players
     const [scores, setScores] = useState({ player1: 0, tie: 0, player2: 0 });
+
 
     
   useEffect(() => {
@@ -55,6 +55,7 @@ export function IndexScreen(){
   useEffect(()=>{
     console.log("he")
     resetGame();
+    setScores({ player1: 0, tie: 0, player2: 0 })
   },[gameMode])
 
 

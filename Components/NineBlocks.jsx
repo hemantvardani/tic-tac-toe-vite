@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import "../pages/index/App.css";
+import { soundsList } from "./Grid";
+
+
 
 export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board , setBoard, winningSquares, setWinningSquares }) {
 
@@ -9,12 +12,27 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
       return;
     }
 
+    makeSoundMove(isX);
+
+    setTimeout(()=>{
     const updatedBoard = [...board]; // Create a shallow copy of the board
     updatedBoard[Math.floor(index / 3)][index % 3] = isX ? "X" : "O"; // Update the clicked square
     setBoard(updatedBoard); // Update the state with the new board
 
     setIsX(!isX); // Switch the player
+
+    },200)
+    
   };
+
+
+
+  function makeSoundMove(isx){
+    if(isx)
+    soundsList['X'].play()
+    else 
+    soundsList['O'].play()
+  }
 
   const checkWinner = () => {
     // Check rows
@@ -74,6 +92,10 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
   useEffect(() => {
     checkWinner();
   }, [board]);
+
+
+
+
 
 
   useEffect(()=>{

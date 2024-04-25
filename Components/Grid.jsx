@@ -4,6 +4,22 @@ import { PlayerModes } from "./PlayerModes";
 import { useState, useEffect } from "react";
 import { findBotBestMove, isMovesLeft } from "../Services/botDecision";
 
+import { Howl } from 'howler';
+
+
+
+export const soundsList= {
+
+    
+    'O':new Howl({ src: ['./../Sounds/positive_beeps.mp3'] , volume:0.07 }),
+    'X':new Howl({ src: ['./../Sounds/x.mp3'] , volume:1}),
+    'Tie':new Howl({ src: ['./../Sounds/negative_beeps.mp3'], volume:0.2 }),
+    'Win':new Howl({ src: ['./../Sounds/win.mp3'], volume:0.17 }),
+    'LosingAgainstBot':new Howl({ src: ['./../Sounds/LosingWithBot.mp3'], volume:0.08 }),
+    }
+    
+
+    
 export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , setGameMode}){
 
   const [winningSquares, setWinningSquares] = useState([]);
@@ -39,6 +55,34 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
 
     }
   },[isX])
+
+  
+
+
+  useEffect(()=>{
+    if(!winner) return;
+
+    console.log('h')
+
+    if(winner==='Tie')
+    {soundsList.Tie.play();
+        console.log('h1.5')
+        return;
+    }
+    console.log('h2')
+
+
+    if(gameMode==='BOT' && winner==='O'){
+            soundsList.LosingAgainstBot.play();return;
+    }
+    
+    console.log('h3')
+    soundsList.Win.play();
+    
+   
+   
+  },[winner])
+
 
 
 
