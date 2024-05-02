@@ -21,7 +21,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
 
     setIsX(!isX); // Switch the player
 
-    },200)
+    },100)
     
   };
 
@@ -133,7 +133,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
               className={`square absolute top-${rowIndex}/3 left-${colIndex}/3 w-1/3 h-1/3 text-9xl ${
                 isWinningSquare ? "blink-animation" : ""
               }`}
-              onClick={() => {
+              onClick={() => {  
                  handleClick(rowIndex * 3 + colIndex);
               }}
             >

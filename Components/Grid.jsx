@@ -11,11 +11,11 @@ import { Howl } from 'howler';
 export const soundsList= {
 
     
-    'O':new Howl({ src: ['./../Sounds/positive_beeps.mp3'] , volume:0.07 }),
-    'X':new Howl({ src: ['./../Sounds/x.mp3'] , volume:1}),
-    'Tie':new Howl({ src: ['./../Sounds/negative_beeps.mp3'], volume:0.2 }),
+    'O':new Howl({ src: ['./../Sounds/positive_beeps.mp3'] , volume:0.6 }),
+    'X':new Howl({ src: ['./../Sounds/x.mp3'] , volume:2}),
+    'Tie':new Howl({ src: ['./../Sounds/negative_beeps.mp3'], volume:0.6 }),
     'Win':new Howl({ src: ['./../Sounds/win.mp3'], volume:0.17 }),
-    'LosingAgainstBot':new Howl({ src: ['./../Sounds/LosingWithBot.mp3'], volume:0.08 }),
+    'LosingAgainstBot':new Howl({ src: ['./../Sounds/LosingWithBot.mp3'], volume:0.3 }),
     }
     
 
@@ -88,15 +88,15 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
 
     return (  
       
-      <div className="mt-10 flex justify-center items-center flex-1 gap-16">
+      <div className="mt-20 flex justify-center items-center flex-1 gap-16">
     <div className="game">
  
       <div className="board relative">
-        <div className="stick-horizontal absolute w-[110%] left-0 top-1/3 transform -translate-x-1/2   "></div>
-        <div className="stick-horizontal absolute w-[110%] left-0 top-2/3 transform -translate-x-1/2  "></div>
+        <div className={"stick-horizontal absolute w-[110%] left-0 top-1/3 transform -translate-x-1/2 "+ (winner ==="Tie" ? "blink-animation" : "") }></div>
+        <div className={"stick-horizontal absolute w-[110%] left-0 top-2/3 transform -translate-x-1/2  " + (winner ==="Tie" ? "blink-animation" : "") }></div>
         <div className="board relative">
-          <div className="stick-vertical absolute h-[110%] left-1/3 top-0 transform -translate-y-1/2   "></div>
-          <div className="stick-vertical absolute h-[110%] left-2/3 top-0 transform -translate-y-1/2  "></div>
+          <div className={"stick-vertical absolute h-[110%] left-1/3 top-0 transform -translate-y-1/2   " + (winner ==="Tie" ? "blink-animation" : "") }></div>
+          <div className={"stick-vertical absolute h-[110%] left-2/3 top-0 transform -translate-y-1/2  "+ (winner ==="Tie" ? "blink-animation" : "") }></div>
  
           <NineBlocks resetGrid={resetGrid} winner={winner}  setWinner={setWinner} setScores={setScores} isX={isX}  setIsX={setIsX} board={board} setBoard={setBoard} winningSquares={winningSquares} setWinningSquares={setWinningSquares}            />
 

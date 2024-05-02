@@ -5,7 +5,7 @@ export const passToClient = ['pageProps', 'urlPathname']
 import ReactDOMServer from 'react-dom/server'
 import { PageShell } from './PageShell'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
-import logoUrl from './logo.svg'
+import logoUrl from './xo-logo2.jpg'
 
 async function render(pageContext) {
   const { Page, pageProps } = pageContext
@@ -19,7 +19,7 @@ async function render(pageContext) {
 
   // See https://vite-plugin-ssr.com/head
   const { documentProps } = pageContext.exports
-  const title = (documentProps && documentProps.title) || 'Vite SSR app'
+  // const title = (documentProps && documentProps.title) || 'Vite SSR app'
   const desc = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
@@ -29,7 +29,7 @@ async function render(pageContext) {
         <link rel="icon" href="${logoUrl}" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
-        <title>${title}</title>
+        <title>${`Tic-Tac-Toe`}</title>
 
         <style>
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
