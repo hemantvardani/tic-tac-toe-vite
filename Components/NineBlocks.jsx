@@ -20,7 +20,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
     setBoard(updatedBoard); // Update the state with the new board
 
     setIsX(!isX); // Switch the player
-
+       console.log('aa')
     },100)
     
   };
@@ -94,10 +94,6 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
   }, [board]);
 
 
-
-
-
-
   useEffect(()=>{
 
     if(winningSquares.length || winner ){
@@ -130,7 +126,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
           return (
             <button
                 key={`${rowIndex}-${colIndex}`}
-              className={`square absolute top-${rowIndex}/3 left-${colIndex}/3 w-1/3 h-1/3 text-9xl ${
+              className={`cell_ square absolute top-${rowIndex}/3 left-${colIndex}/3 w-1/3 h-1/3 ${
                 isWinningSquare ? "blink-animation" : ""
               }`}
               onClick={() => {  

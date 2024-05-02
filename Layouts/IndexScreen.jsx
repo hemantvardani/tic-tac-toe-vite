@@ -7,10 +7,12 @@ import "../pages/index/App.css";
 export function IndexScreen(){
 
     const [winner, setWinner] = useState(null);
+    const [begginer, setbegginer]= useState('X')
     const [isX, setIsX] = useState(true);
-    const [gameMode, setGameMode] = useState("2P"); // Default: 2 Players
+    const [gameMode, setGameMode] = useState("BOT"); 
     const [scores, setScores] = useState({ player1: 0, tie: 0, player2: 0 });
 
+  
 
     
   useEffect(() => {
@@ -30,8 +32,11 @@ export function IndexScreen(){
 
       const timer = setTimeout(() => {
         console.log('ss2')
-        console.log()
-        resetGame();
+         
+        setWinner(null);
+        console.log(begginer,'begginer')
+        setbegginer(begginer==='X'?'O':'X');
+        
       }, 2000); 
 
       return () => {
@@ -39,6 +44,13 @@ export function IndexScreen(){
       };
     }
   }, [winner]);
+
+
+  useEffect(()=>{
+        
+        setIsX(begginer==='X'?true:false)
+        
+  },[begginer])
 
 
 
@@ -58,6 +70,9 @@ export function IndexScreen(){
     setScores({ player1: 0, tie: 0, player2: 0 })
   },[gameMode])
 
+
+  useEffect(()=>{console.log("test", isX); console.log('begginer*',begginer)})
+  
 
 
     return (<>

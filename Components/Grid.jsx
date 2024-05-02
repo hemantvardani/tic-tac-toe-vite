@@ -52,6 +52,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
       newBoard[row][col]='O';
       setBoard(newBoard);
       setIsX(true);
+      console.log('aa1')
 
     }
   },[isX])
@@ -82,13 +83,13 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
    
    
   },[winner])
-
-
-
-
+ 
+  
+  
+  
     return (  
       
-      <div className="mt-20 flex justify-center items-center flex-1 gap-16">
+      <div className="flex justify-center items-center gap-16">
     <div className="game">
  
       <div className="board relative">
@@ -105,7 +106,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
     </div>
 
         
-      <div className='right-0'>
+      <div className=''>
     <PlayerModes resetGrid={resetGrid} gameMode={gameMode} setGameMode={setGameMode}  />
       </div>
 
