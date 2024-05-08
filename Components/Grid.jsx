@@ -6,20 +6,30 @@ import { findBotBestMove, isMovesLeft } from "../Services/botDecision";
 
 import { Howl } from 'howler';
 
+ 
 
+// export const soundsList= {
 
-export const soundsList= {
+  
+//     'O':new Howl({ src: ['./../Sounds/positive_beeps.mp3'] , volume:0.6 }),
+//     'X':new Howl({ src: ['./../Sounds/x.mp3'] , volume:2}),
+//     'Tie':new Howl({ src: ['./../Sounds/negative_beeps.mp3'], volume:0.6 }),
+//     'Win':new Howl({ src: ['./../Sounds/win.mp3'], volume:0.17 }),
+//     'LosingAgainstBot':new Howl({ src: ['./../Sounds/LosingWithBot.mp3'], volume:0.3 }),
+//     }
 
+    export const soundsList= {
+
+  
+      'O':new Howl({ src: ['/assets/static/positive_beeps.mp3'] , volume:0.6 }),
+      'X':new Howl({ src: ['/assets/static/x.mp3'] , volume:2}),
+      'Tie':new Howl({ src: ['/assets/static/negative_beeps.mp3'], volume:0.6 }),
+      'Win':new Howl({ src: ['/assets/static/win.mp3'], volume:0.17 }),
+      'LosingAgainstBot':new Howl({ src: ['/assets/static/LosingWithBot.mp3'], volume:0.3 }),
+      }
     
-    'O':new Howl({ src: ['./../Sounds/positive_beeps.mp3'] , volume:0.6 }),
-    'X':new Howl({ src: ['./../Sounds/x.mp3'] , volume:2}),
-    'Tie':new Howl({ src: ['./../Sounds/negative_beeps.mp3'], volume:0.6 }),
-    'Win':new Howl({ src: ['./../Sounds/win.mp3'], volume:0.17 }),
-    'LosingAgainstBot':new Howl({ src: ['./../Sounds/LosingWithBot.mp3'], volume:0.3 }),
-    }
-    
 
-    
+
 export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , setGameMode}){
 
   const [winningSquares, setWinningSquares] = useState([]);
@@ -42,7 +52,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
   }
  
   useEffect(()=>{
-    if(!isX && gameMode==='BOT' && !winner && isMovesLeft(board))
+     if(!isX && gameMode==='BOT' && !winner && isMovesLeft(board))
     {
       
       console.log("helo")
@@ -83,7 +93,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
    
    
   },[winner])
- 
+
   
   
   

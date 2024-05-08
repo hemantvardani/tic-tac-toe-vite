@@ -1,0 +1,140 @@
+{
+  "_chunk-3c96239d.js": {
+    "file": "assets/chunks/chunk-3c96239d.js"
+  },
+  "_chunk-4d04ce61.js": {
+    "file": "assets/chunks/chunk-4d04ce61.js"
+  },
+  "_chunk-725317a4.js": {
+    "file": "assets/chunks/chunk-725317a4.js"
+  },
+  "_chunk-8098a5ac.js": {
+    "file": "assets/chunks/chunk-8098a5ac.js",
+    "imports": [
+      "_chunk-725317a4.js",
+      "_chunk-4d04ce61.js"
+    ]
+  },
+  "_chunk-dec749ac.js": {
+    "file": "assets/chunks/chunk-dec749ac.js",
+    "imports": [
+      "_chunk-725317a4.js"
+    ]
+  },
+  "node_modules/vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js": {
+    "dynamicImports": [
+      "pages/about/index.page.jsx",
+      "pages/index/index.page.jsx",
+      "renderer/_error.page.jsx",
+      "renderer/_default.page.client.jsx",
+      "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
+    ],
+    "file": "assets/entries/entry-client-routing.7169c201.js",
+    "imports": [
+      "_chunk-3c96239d.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js"
+  },
+  "node_modules/vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js": {
+    "dynamicImports": [
+      "pages/about/index.page.jsx",
+      "pages/index/index.page.jsx",
+      "renderer/_error.page.jsx",
+      "renderer/_default.page.client.jsx",
+      "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
+    ],
+    "file": "assets/entries/entry-server-routing.d643573d.js",
+    "imports": [
+      "_chunk-3c96239d.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/vite-plugin-ssr/dist/esm/client/server-routing-runtime/entry.js"
+  },
+  "pages/about/index.page.css": {
+    "file": "assets/static/index.page.f1aef519.css",
+    "src": "pages/about/index.page.css"
+  },
+  "pages/about/index.page.jsx": {
+    "css": [
+      "assets/static/index.page.f1aef519.css"
+    ],
+    "file": "assets/entries/pages_about_index.page.479e3e07.js",
+    "imports": [
+      "_chunk-4d04ce61.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/about/index.page.jsx"
+  },
+  "pages/index/index.page.css": {
+    "file": "assets/static/index.page.5ba374aa.css",
+    "src": "pages/index/index.page.css"
+  },
+  "pages/index/index.page.jsx": {
+    "assets": [
+      "assets/static/crown3.10915793.png"
+    ],
+    "css": [
+      "assets/static/index.page.5ba374aa.css"
+    ],
+    "file": "assets/entries/pages_index_index.page.f3cb3109.js",
+    "imports": [
+      "_chunk-4d04ce61.js",
+      "_chunk-8098a5ac.js",
+      "_chunk-725317a4.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "pages/index/index.page.jsx"
+  },
+  "renderer/_default.page.client.jsx": {
+    "file": "assets/entries/renderer_default.page.client.b64b68bc.js",
+    "imports": [
+      "_chunk-4d04ce61.js",
+      "_chunk-8098a5ac.js",
+      "_chunk-dec749ac.js",
+      "renderer/_default.page.server.jsx?extractAssets&lang.jsx",
+      "_chunk-725317a4.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "renderer/_default.page.client.jsx"
+  },
+  "renderer/_default.page.server.jsx?extractAssets&lang.css": {
+    "file": "assets/static/default.page.server.d4835ae9.css",
+    "src": "renderer/_default.page.server.jsx?extractAssets&lang.css"
+  },
+  "renderer/_default.page.server.jsx?extractAssets&lang.jsx": {
+    "css": [
+      "assets/static/default.page.server.d4835ae9.css"
+    ],
+    "file": "assets/entries/renderer_default.page.server.extractAssets.334717de.js",
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
+  },
+  "renderer/_error.page.jsx": {
+    "file": "assets/entries/renderer_error.page.189c967e.js",
+    "imports": [
+      "_chunk-4d04ce61.js",
+      "_chunk-dec749ac.js",
+      "_chunk-725317a4.js"
+    ],
+    "isDynamicEntry": true,
+    "isEntry": true,
+    "src": "renderer/_error.page.jsx"
+  },
+  "renderer/crown3.png": {
+    "file": "assets/static/crown3.10915793.png",
+    "src": "renderer/crown3.png"
+  },
+  "renderer/logo.svg": {
+    "file": "assets/static/logo.bebe2e90.svg",
+    "src": "renderer/logo.svg"
+  },
+  "renderer/xo-logo4.jpg": {
+    "file": "assets/static/xo-logo4.47b351d1.jpg",
+    "src": "renderer/xo-logo4.jpg"
+  }
+}
