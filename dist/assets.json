@@ -29,7 +29,7 @@
       "renderer/_default.page.client.jsx",
       "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
     ],
-    "file": "assets/entries/entry-client-routing.7169c201.js",
+    "file": "assets/entries/entry-client-routing.dcd91a1c.js",
     "imports": [
       "_chunk-3c96239d.js"
     ],
@@ -44,7 +44,7 @@
       "renderer/_default.page.client.jsx",
       "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
     ],
-    "file": "assets/entries/entry-server-routing.d643573d.js",
+    "file": "assets/entries/entry-server-routing.628b2c76.js",
     "imports": [
       "_chunk-3c96239d.js"
     ],
@@ -68,7 +68,7 @@
     "src": "pages/about/index.page.jsx"
   },
   "pages/index/index.page.css": {
-    "file": "assets/static/index.page.5ba374aa.css",
+    "file": "assets/static/index.page.5404d0d2.css",
     "src": "pages/index/index.page.css"
   },
   "pages/index/index.page.jsx": {
@@ -76,9 +76,9 @@
       "assets/static/crown3.10915793.png"
     ],
     "css": [
-      "assets/static/index.page.5ba374aa.css"
+      "assets/static/index.page.5404d0d2.css"
     ],
-    "file": "assets/entries/pages_index_index.page.f3cb3109.js",
+    "file": "assets/entries/pages_index_index.page.2546d682.js",
     "imports": [
       "_chunk-4d04ce61.js",
       "_chunk-8098a5ac.js",
