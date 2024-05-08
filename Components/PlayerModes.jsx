@@ -26,7 +26,7 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
 
     return (
 
-          <div className="flex flex-row md:flex-col justify-center items-center gap-2">
+          <div className="flex flex-row sm:flex-col justify-center items-center gap-2">
           
           
           <Tooltip placement="right" title={"Against BOT"}  color='blue' >

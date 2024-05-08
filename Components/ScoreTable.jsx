@@ -11,7 +11,7 @@ export function ScoreTable({ scores, isX, gameMode }) {
   const isOLeading = scores.player2 >= scores.player1 && scores.player2 != 0;
 
   return (
-    <div className="score justify-center items-center flex gap-3 ">
+    <div className="score justify-center items-center flex">
       <div className="flex flex-col justify-center items-center  ">
         <div style={{ visibility: isXLeading ? "" : "hidden" }}>
           <img
@@ -43,7 +43,7 @@ export function ScoreTable({ scores, isX, gameMode }) {
         <div className={` ${isX ? "move-underline" : ""}`} />
       </div>
 
-      <div className="flex flex-col  justify-end">
+      <div className="flex flex-col justify-center items-center">
         <div style={{ visibility: isOLeading ? "" : "hidden" }}>
           <img
             src={crownImage}
