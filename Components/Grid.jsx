@@ -99,7 +99,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
   
     return (  
       
-      <div className="flex justify-center items-center gap-16">
+      <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-16 w-[100%] h-[100%] p-3 pt-16 ">
     <div className="game">
  
       <div className="board relative">
@@ -116,7 +116,7 @@ export function Grid({winner, setWinner, setScores , isX, setIsX, gameMode , set
     </div>
 
         
-      <div className=''>
+      <div  >
     <PlayerModes resetGrid={resetGrid} gameMode={gameMode} setGameMode={setGameMode}  />
       </div>
 

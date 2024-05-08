@@ -11,8 +11,8 @@ body {
 }
 
 .game {
-  width: 450px;
-  height: 450px;
+  height: 100%;
+  width: 100%;
   border-radius: 12px;
   background-color: #000000;
   box-shadow: 20 20 20px rgba(0, 0, 0, 0.9);
@@ -20,55 +20,69 @@ body {
 }
 
 .cell_ {
-  font-size: 8rem/* 128px */;
+  font-size: 10rem/* 128px */;
   line-height: 1;
 }
 
  
 @media screen and (((min-width: 650px) and (max-width: 750px)) or ((min-height: 520px) and (max-height: 650px))) {
-  .game {
+  /* .game {
     width: 350px;
     height: 350px;
-  }
+  } */
   .cell_{
-    font-size: 100px ;
+    font-size: 130px ;
     line-height: 1;
   }
 }
  
 
 @media screen and (((min-width: 570px) and (max-width: 650px)) or ((min-height: 450px) and (max-height: 520px))) {
-  .game {
+  /* .game {
     width: 300px;
     height: 300px;
-  }
+  } */
   .cell_{
-    font-size: 90px ;
+    font-size: 110px ;
     line-height: 1;
   }
 }
 
-@media screen and (((min-width: 450px) and (max-width: 570px)) or ((min-height: 420px) and (max-height: 450px))) {
-  .game {
+@media screen and (((min-width: 470px) and (max-width: 570px)) or ((min-height: 420px) and (max-height: 450px))) {
+  /* .game {
     width: 270px;
     height: 270px;
+  } */
+  .cell_{
+    font-size: 96px ;
+    line-height: 1;
   }
+}
+
+
+
+@media screen and (((min-width: 380px) and (max-width: 470px)) or ((min-height: 420px) and (max-height: 450px))) {
+  /* .game {
+    width: 270px;
+    height: 270px;
+  } */
   .cell_{
     font-size: 80px ;
     line-height: 1;
   }
 }
 
-@media screen  and (((max-width: 450px)) or ( max-height: 420px)) {
-  .game {
+@media screen  and (((max-width: 380px)) or ( max-height: 420px)) {
+  /* .game {
     width: 200px;
     height: 200px;
-  }
+  } */
   .cell_{
     font-size: 60px ;
     line-height: 1;
   }
 }
+
 
 .board {
   position: relative;
@@ -168,7 +182,7 @@ body {
 }
 
 .score div {
-  padding: 8px 16px;
+  padding: 8px 32px;
   border-radius: 8px;
   /* background-color: #4a5568; */
   display: flex;
