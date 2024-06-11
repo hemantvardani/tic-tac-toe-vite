@@ -1,25 +1,21 @@
 {
+  "_chunk-140b20bb.js": {
+    "file": "assets/chunks/chunk-140b20bb.js",
+    "imports": [
+      "_chunk-acd5ffdb.js"
+    ]
+  },
+  "_chunk-1a8868cb.js": {
+    "file": "assets/chunks/chunk-1a8868cb.js",
+    "imports": [
+      "_chunk-acd5ffdb.js"
+    ]
+  },
   "_chunk-3c96239d.js": {
     "file": "assets/chunks/chunk-3c96239d.js"
   },
-  "_chunk-4d04ce61.js": {
-    "file": "assets/chunks/chunk-4d04ce61.js"
-  },
-  "_chunk-725317a4.js": {
-    "file": "assets/chunks/chunk-725317a4.js"
-  },
-  "_chunk-8098a5ac.js": {
-    "file": "assets/chunks/chunk-8098a5ac.js",
-    "imports": [
-      "_chunk-725317a4.js",
-      "_chunk-4d04ce61.js"
-    ]
-  },
-  "_chunk-dec749ac.js": {
-    "file": "assets/chunks/chunk-dec749ac.js",
-    "imports": [
-      "_chunk-725317a4.js"
-    ]
+  "_chunk-acd5ffdb.js": {
+    "file": "assets/chunks/chunk-acd5ffdb.js"
   },
   "node_modules/vite-plugin-ssr/dist/esm/client/client-routing-runtime/entry.js": {
     "dynamicImports": [
@@ -29,7 +25,7 @@
       "renderer/_default.page.client.jsx",
       "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
     ],
-    "file": "assets/entries/entry-client-routing.dcd91a1c.js",
+    "file": "assets/entries/entry-client-routing.ee566a42.js",
     "imports": [
       "_chunk-3c96239d.js"
     ],
@@ -44,7 +40,7 @@
       "renderer/_default.page.client.jsx",
       "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
     ],
-    "file": "assets/entries/entry-server-routing.628b2c76.js",
+    "file": "assets/entries/entry-server-routing.41319a8e.js",
     "imports": [
       "_chunk-3c96239d.js"
     ],
@@ -59,16 +55,16 @@
     "css": [
       "assets/static/index.page.f1aef519.css"
     ],
-    "file": "assets/entries/pages_about_index.page.479e3e07.js",
+    "file": "assets/entries/pages_about_index.page.c90be6ad.js",
     "imports": [
-      "_chunk-4d04ce61.js"
+      "_chunk-acd5ffdb.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/about/index.page.jsx"
   },
   "pages/index/index.page.css": {
-    "file": "assets/static/index.page.5404d0d2.css",
+    "file": "assets/static/index.page.83ba3706.css",
     "src": "pages/index/index.page.css"
   },
   "pages/index/index.page.jsx": {
@@ -76,26 +72,24 @@
       "assets/static/crown3.10915793.png"
     ],
     "css": [
-      "assets/static/index.page.5404d0d2.css"
+      "assets/static/index.page.83ba3706.css"
     ],
-    "file": "assets/entries/pages_index_index.page.2546d682.js",
+    "file": "assets/entries/pages_index_index.page.b304d388.js",
     "imports": [
-      "_chunk-4d04ce61.js",
-      "_chunk-8098a5ac.js",
-      "_chunk-725317a4.js"
+      "_chunk-acd5ffdb.js",
+      "_chunk-1a8868cb.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
     "src": "pages/index/index.page.jsx"
   },
   "renderer/_default.page.client.jsx": {
-    "file": "assets/entries/renderer_default.page.client.b64b68bc.js",
+    "file": "assets/entries/renderer_default.page.client.d70ea8b7.js",
     "imports": [
-      "_chunk-4d04ce61.js",
-      "_chunk-8098a5ac.js",
-      "_chunk-dec749ac.js",
-      "renderer/_default.page.server.jsx?extractAssets&lang.jsx",
-      "_chunk-725317a4.js"
+      "_chunk-acd5ffdb.js",
+      "_chunk-1a8868cb.js",
+      "_chunk-140b20bb.js",
+      "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -115,11 +109,10 @@
     "src": "renderer/_default.page.server.jsx?extractAssets&lang.jsx"
   },
   "renderer/_error.page.jsx": {
-    "file": "assets/entries/renderer_error.page.189c967e.js",
+    "file": "assets/entries/renderer_error.page.64541f3d.js",
     "imports": [
-      "_chunk-4d04ce61.js",
-      "_chunk-dec749ac.js",
-      "_chunk-725317a4.js"
+      "_chunk-acd5ffdb.js",
+      "_chunk-140b20bb.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -133,8 +126,8 @@
     "file": "assets/static/logo.bebe2e90.svg",
     "src": "renderer/logo.svg"
   },
-  "renderer/xo-logo4.jpg": {
-    "file": "assets/static/xo-logo4.47b351d1.jpg",
-    "src": "renderer/xo-logo4.jpg"
+  "renderer/xo-logo4.webp": {
+    "file": "assets/static/xo-logo4.20349ed4.webp",
+    "src": "renderer/xo-logo4.webp"
   }
 }

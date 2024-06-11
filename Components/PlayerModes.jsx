@@ -6,8 +6,8 @@ import {Tooltip} from 'antd'
 const BotIcon = () => {
     return <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
+      width="30"
+      height="30"
       fill='currentColor'
       class="bi bi-robot"
       viewBox="0 0 16 16"
@@ -26,7 +26,7 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
 
     return (
 
-          <div className="flex flex-row sm:flex-col justify-center items-center gap-2">
+          <div className="flex flex-row sm:flex-col justify-center items-center gap-6">
           
           
           <Tooltip placement="right" title={"Against BOT"}  color='blue' >
@@ -48,8 +48,8 @@ export function PlayerModes({resetGrid, gameMode, setGameMode}){
            >
              <svg
                xmlns="http://www.w3.org/2000/svg"
-               width="16"
-               height="16"
+               width="30"
+               height="30"
                fill="currentColor"
                class="bi bi-people-fill"
                viewBox="0 0 16 16"

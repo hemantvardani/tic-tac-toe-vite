@@ -93,8 +93,8 @@ const BotIcon = () => {
     "svg",
     {
       xmlns: "http://www.w3.org/2000/svg",
-      width: "16",
-      height: "16",
+      width: "30",
+      height: "30",
       fill: "currentColor",
       class: "bi bi-robot",
       viewBox: "0 0 16 16",
@@ -110,7 +110,7 @@ function PlayerModes({ resetGrid, gameMode, setGameMode }) {
     setGameMode(mode);
     resetGrid();
   }
-  return /* @__PURE__ */ jsxs("div", { className: "flex flex-row sm:flex-col justify-center items-center gap-2", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "flex flex-row sm:flex-col justify-center items-center gap-6", children: [
     /* @__PURE__ */ jsx(Tooltip, { placement: "right", title: "Against BOT", color: "blue", children: /* @__PURE__ */ jsx(
       "button",
       {
@@ -128,8 +128,8 @@ function PlayerModes({ resetGrid, gameMode, setGameMode }) {
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
-            width: "16",
-            height: "16",
+            width: "30",
+            height: "30",
             fill: "currentColor",
             class: "bi bi-people-fill",
             viewBox: "0 0 16 16",
@@ -314,8 +314,6 @@ function ScoreTable({ scores, isX, gameMode }) {
           alt: "Crown",
           style: {
             marginBottom: "-5px",
-            // top: "-0px", // Adjust this to position the crown
-            // left: "30%", // Adjust this to position the crown
             transform: "translateX(-24%)",
             // Center the crown horizontally
             height: "50px"
@@ -439,7 +437,16 @@ function IndexScreen() {
   ] });
 }
 function App() {
-  return /* @__PURE__ */ jsx("div", { className: "h-screen bg-[#000000] text-white flex justify-center items-center ", children: /* @__PURE__ */ jsx("div", { className: "sm:aspect-square h-[90%] w-[80%] sm:w-[min(100%,100vh)] sm:h-[min(100%,100vw)] flex flex-col justify-end items-center pl-6 sm:p-0 ", children: /* @__PURE__ */ jsx(IndexScreen, {}) }) });
+  useEffect(() => {
+    const handleLoad = () => {
+      window.scrollTo(0, document.body.scrollHeight);
+    };
+    window.addEventListener("load", handleLoad);
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+  return /* @__PURE__ */ jsx("div", { className: "h-screen bg-[#000000] text-white flex justify-center items-center", children: /* @__PURE__ */ jsx("div", { className: "sm:aspect-square h-[90%] w-[80%]   lg:w-[min(100%,100vh)] lg:h-[min(100%,100vw)] flex flex-col justify-end items-center pl-6 sm:p-0 ", children: /* @__PURE__ */ jsx(IndexScreen, {}) }) });
 }
 const index = "";
 function Page() {

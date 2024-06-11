@@ -20,7 +20,7 @@ body {
 }
 
 .cell_ {
-  font-size: 10rem/* 128px */;
+  font-size: 128px ;
   line-height: 1;
 }
 
@@ -147,6 +147,17 @@ body {
   fill: #fff;
 }
 
+@media screen and (((min-width: 750px) and (max-width: 1000px)) or ((min-height: 560px) and (max-height: 650px))) {
+  /* .game {
+    width: 350px;
+    height: 350px;
+  } */
+  .cell_{
+    font-size: 130px ;
+    line-height: 1;
+  }
+}
+
 @media screen and (((min-width: 660px) and (max-width: 750px)) or ((min-height: 560px) and (max-height: 650px))) {
   /* .game {
     width: 350px;
@@ -177,7 +188,7 @@ body {
 } */
 
   /* explicit handling  */
-@media screen and (((max-width: 640px)) and ((max-height: 490px))) {
+@media screen and (((max-width: 640px)) and ((max-height: 525px))) {
   
   .cell_{
     font-size: 40px ;
@@ -196,7 +207,9 @@ body {
 } */
 
 @media screen  and (((max-width: 640px)) ) {
-  
+  .game{
+    height: 60%;
+  }
   .score div {
     padding: 8px 50px;
     border-radius: 8px;
@@ -212,7 +225,15 @@ body {
     line-height: 1;
   }
 }
-@media screen  and  (  (max-height: 470px)) 
+@media screen  and  (  (max-height: 525px)) 
+{
+  .cell_{
+    font-size: 40px ;
+   }
+
+}
+
+@media screen  and  (  (max-height: 490px)) 
 {
   .cell_{
     font-size: 30px ;
@@ -251,3 +272,199 @@ body {
     transform: translateX(100%) scaleX(1); /* Move off-screen to the right */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen  and (((max-width: 640px)) ) {
+  .game{
+    height: 60%;
+  }
+  .score div {
+    padding: 8px 50px;
+    border-radius: 8px;
+    /* background-color: #4a5568; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+  }
+
+
+}
+
+
+
+:root {
+  --font-size: 128px; /* Default font size */
+  --font-size-width:120px;
+   --font-size-height:128px;
+   --font-size-height2:128px;
+}
+ 
+@media screen and (max-width: 1024px) {
+  :root {
+    --font-size-width: 110px;
+     
+  }
+}
+
+@media screen and (max-width: 750px) {
+  :root {
+    --font-size-width: 100px;
+     
+  }
+}
+
+@media screen and (max-width: 660px)  {
+  :root {
+    --font-size-width: 80px;
+    
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --font-size-width: 65px;
+   
+  }
+}
+ 
+
+
+
+
+
+
+ 
+ 
+@media screen and (max-height: 650px) and (min-width:640px)  {
+  :root {
+    
+    --font-size-height:100px;
+  }
+}
+
+@media screen and (max-height: 600px) and (min-width:640px) {
+  :root {
+    
+    --font-size-height:80px;
+  }
+}
+
+
+@media screen and (max-height: 550px)and (min-width:640px)  {
+  :root {
+    
+    --font-size-height:70px;
+  }
+}
+@media screen and (max-height: 520px)and (min-width:640px)  {
+  :root {
+    
+    --font-size-height:60px;
+  }
+}
+
+@media screen and (max-height: 490px) and (min-width:640px) {
+  :root {
+    
+    --font-size-height:50px;
+  }
+}
+
+@media screen and (max-height: 450px)and (min-width:640px)  {
+  :root {
+    
+    --font-size-height:40px;
+  }
+}
+ 
+@media screen and (max-height: 420px) and (min-width:640px) {
+  :root {
+    
+    --font-size-height:30px;
+  }
+}
+
+@media screen and (max-height: 380px) and (min-width:640px) {
+  :root {
+    
+    --font-size-height:20px;
+  }
+}  
+ 
+
+
+
+
+
+
+
+
+@media screen and (max-height: 650px) and (max-width:640px)  {
+  :root {
+    
+    --font-size-height2:100px;
+  }
+}
+
+
+
+@media screen and (max-height: 600px) and (max-width:640px)  {
+  :root {
+    
+    --font-size-height2:50px;
+  }
+}
+
+@media screen and (max-height: 550px) and (max-width:640px)  {
+  :root {
+    
+    --font-size-height2:40px;
+  }
+}
+
+@media screen and (max-height: 520px) and (max-width:640px)  {
+  :root {
+    
+    --font-size-height2:30px;
+  }
+}
+
+
+@media screen and (max-height: 480px) and (max-width:640px)  {
+  :root {
+    
+    --font-size-height2:20px;
+  }
+}
+
+
+
+
+ 
+/* Calculate the font size based on the smaller dimension */
+.cell_ {
+  /* font-size: calc(min(var(--font-size-width, var(--font-size)), var(--font-size-height, var(--font-size)))); */
+  line-height: 1;
+  font-size: calc( min( var(--font-size-height2),min(var(--font-size-width, var(--font-size)), var(--font-size-height, var(--font-size)))));
+}
+
+
+
+

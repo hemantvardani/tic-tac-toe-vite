@@ -80,7 +80,9 @@ export function IndexScreen(){
     return (<>
      {/* <Winner winner={winner} isX={isX}/> */}
  
+
  <Grid winner={winner} setWinner={setWinner} setScores={setScores} isX={isX} setIsX={setIsX} gameMode={gameMode} setGameMode={setGameMode} />
+ 
 
  <ScoreTable scores={scores} isX={isX} gameMode={gameMode}/>
  
