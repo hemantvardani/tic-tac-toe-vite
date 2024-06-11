@@ -47,11 +47,11 @@ export function IndexScreen(){
 
 
   useEffect(()=>{
-        
+        // console.log('vardaa')
+        // console.log(isX,begginer)
         setIsX(begginer==='X'?true:false)
         
   },[begginer])
-
 
 
   const resetGame = () => {
@@ -65,20 +65,24 @@ export function IndexScreen(){
 
 
   useEffect(()=>{
-    console.log("he")
+    // console.log("he")
     resetGame();
     setScores({ player1: 0, tie: 0, player2: 0 })
   },[gameMode])
 
 
-  useEffect(()=>{console.log("test", isX); console.log('begginer*',begginer)})
+  // useEffect(()=>{
+  //   console.log("test", isX);
+  //    console.log('begginer*',begginer)})
   
 
 
     return (<>
      {/* <Winner winner={winner} isX={isX}/> */}
  
+
  <Grid winner={winner} setWinner={setWinner} setScores={setScores} isX={isX} setIsX={setIsX} gameMode={gameMode} setGameMode={setGameMode} />
+ 
 
  <ScoreTable scores={scores} isX={isX} gameMode={gameMode}/>
  

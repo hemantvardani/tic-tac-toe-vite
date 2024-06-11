@@ -20,7 +20,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
     setBoard(updatedBoard); // Update the state with the new board
 
     setIsX(!isX); // Switch the player
-       console.log('aa')
+      //  console.log('aa')
     },100)
     
   };
@@ -44,6 +44,7 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
       ) {
         setWinner(board[i][0]);
         setWinningSquares([`${i}-0`, `${i}-1`, `${i}-2`]);
+        setIsX(null)
         return;
       }
     }
@@ -57,6 +58,8 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
       ) {
         setWinner(board[0][i]);
         setWinningSquares([`0-${i}`, `1-${i}`, `2-${i}`]);
+        setIsX(null)
+
         return;
       }
     }
@@ -69,6 +72,8 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
     ) {
       setWinner(board[0][0]);
       setWinningSquares([`0-0`, `1-1`, `2-2`]);
+      setIsX(null)
+
       return;
     }
 
@@ -79,12 +84,17 @@ export function NineBlocks({resetGrid , winner, setWinner, isX , setIsX, board ,
     ) {
       setWinner(board[0][2]);
       setWinningSquares([`0-2`, `1-1`, `2-0`]);
+      setIsX(null)
+
       return;
     }
 
     // Check for tie
     if (!board.flat().includes(null)) {
+      console.log('setting winner tie')
       setWinner("Tie");
+      setIsX(null)
+
       return;
     }
   };

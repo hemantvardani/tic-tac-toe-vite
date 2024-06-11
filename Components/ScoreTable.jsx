@@ -11,20 +11,19 @@ export function ScoreTable({ scores, isX, gameMode }) {
   const isOLeading = scores.player2 >= scores.player1 && scores.player2 != 0;
 
   return (
-    <div className="score items-end flex gap-3">
-      <div className="flex flex-col  justify-end">
+    <div className="score justify-center items-center flex">
+      <div className="flex flex-col justify-center items-center  ">
         <div style={{ visibility: isXLeading ? "" : "hidden" }}>
-          <img
+        <img
             src={crownImage}
             alt="Crown"
             style={{
               marginBottom: "-5px",
-              // top: "-0px", // Adjust this to position the crown
-              // left: "30%", // Adjust this to position the crown
+              
               transform: "translateX(-24%)", // Center the crown horizontally
               height: "50px", // Adjust the size of the crown
             }}
-          />
+          />  
         </div>
         <Tooltip
           placement="top"
@@ -43,7 +42,7 @@ export function ScoreTable({ scores, isX, gameMode }) {
         <div className={` ${isX ? "move-underline" : ""}`} />
       </div>
 
-      <div className="flex flex-col  justify-end">
+      <div className="flex flex-col justify-center items-center">
         <div style={{ visibility: isOLeading ? "" : "hidden" }}>
           <img
             src={crownImage}
@@ -71,9 +70,10 @@ export function ScoreTable({ scores, isX, gameMode }) {
             O : {scores.player2}
           </div>
         </Tooltip>
-        <div
+          <div
           className={` ${!isX && gameMode === "2P" ? "move-underline" : ""}`}
-        />
+        />  
+        
       </div>
     </div>
   );

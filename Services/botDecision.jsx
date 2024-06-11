@@ -160,12 +160,12 @@ export function findBotBestMove(board) {
             bestMovesSet.push([i,j])
         }
 
-        console.log("move value", i, j, moveVal);
+        console.log("mv", i, j, moveVal);
       }
     }
   }
 
-  console.log("The value of the best Move " + "is : ", bestVal + "<br><br>");
+  // console.log("The value of the best Move " + "is : ", bestVal + "<br><br>");
 
   const randomIndex = Math.floor(Math.random() * bestMovesSet.length);
   return bestMovesSet[randomIndex];
